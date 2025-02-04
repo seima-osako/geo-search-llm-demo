@@ -18,7 +18,7 @@ from setting import metadata_field_info
 from prompts import PROMPT
 
 
-load_dotenv(".env")
+load_dotenv()
 GEMENI_CHAT_MODEL = "gemini-1.5-flash-latest"
 GEMENI_API_KEY = os.environ.get("GEMENI_API_KEY")
 GEMENI_EMBEDDING_MODEL = "models/embedding-001"

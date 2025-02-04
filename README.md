@@ -49,31 +49,25 @@ An intelligent chat-based system that helps users discover and analyze Dutch geo
 
 ## 🚀 Getting Started
 
-1. **Clone the Repository**
-```bash
-git clone [repository-url]
-cd geo-search
-```
-
-2. **Environment Setup**
+1. **Environment Setup**
 ```bash
 # Install dependencies using Poetry
 poetry install
 ```
 
-3. **Configuration**
+2. **Configuration**
 ```bash
 # Create .env file and add your Google Gemini API key
 GEMENI_API_KEY=your_api_key_here
 ```
 
-4. **Data Preparation**
+3. **Data Preparation**
 ```bash
 # Run the data collection and vectorization notebook
 jupyter notebook nl_geodata_scraper_vectorizer.ipynb
 ```
 
-5. **Launch the Application**
+4. **Launch the Application**
 ```bash
 poetry run chainlit run app_self-query.py
 ```
