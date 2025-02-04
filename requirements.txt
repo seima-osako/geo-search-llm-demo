@@ -1,0 +1,11 @@
+langchain-postgres>=0.0.12
+chainlit>=2.1.0
+langchain>=0.3.17
+langchain-community>=0.3.16
+python-dotenv>=1.0.1
+lark>=1.2.2
+langchain-google-genai>=2.0.9
+selenium>=4.28.1
+webdriver-manager>=4.0.2
+pandas>=2.2.3
+langchain-chroma>=0.2.1
