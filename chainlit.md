@@ -2,6 +2,12 @@
 
 This is a simple demonstration of an AI assistant that helps you discover appropriate geospatial analysis methods and relevant data sources for your research questions.
 
+## Important Notice ⚠️
+
+When deployed on Azure Web Apps with minimum specifications, the application may experience slower performance compared to local execution. For testing and better performance, I recommend trying the application locally using the original repository:
+
+https://github.com/seima-osako/geo-search-llm-demo
+
 ## About This Demo 🎯
 
 This straightforward demo combines AI capabilities to help you plan your geospatial analysis:

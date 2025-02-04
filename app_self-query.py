@@ -3,14 +3,9 @@ import os
 
 from dotenv import load_dotenv
 import chainlit as cl
-from chainlit.input_widget import Select, Switch, Slider
-from langchain.callbacks.manager import CallbackManager
-from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+from chainlit.input_widget import Select, Slider
 from langchain_chroma import Chroma
-from langchain_core.documents import Document
-from langchain.prompts import PromptTemplate
 from langchain.retrievers.self_query.base import SelfQueryRetriever
-from langchain.text_splitter import CharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
 
 
@@ -102,7 +97,7 @@ async def chat_profile():
     return [
         cl.ChatProfile(
             name="Gemini",
-            markdown_description="The underlying LLM model is *Gemini**.",
+            markdown_description="The underlying LLM model is **Gemini**.",
             icon="https://cdn-icons-png.flaticon.com/512/8649/8649595.png",
         )
     ]
@@ -180,6 +175,7 @@ async def process_query(content: str):
         message_history = []
 
     msg = cl.Message(content="")
+    await msg.send()
 
     documents, total_documents = get_source_documents(content)
     prompt_content = PROMPT.format(document=total_documents, question=content)
